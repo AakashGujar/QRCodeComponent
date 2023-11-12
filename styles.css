@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c92d2d;
+  background-image: -webkit-linear-gradient(147deg, #ff3b3b 0%, #080808 74%);
+  background-image: -moz-linear-gradient(147deg, #ff3b3b 0%, #080808 74%);
+  background-image: -o-linear-gradient(147deg, #ff3b3b 0%, #080808 74%);
+  background-image: linear-gradient(147deg, #ff3b3b 0%, #080808 74%);
+}
+
+/* ******************attribution******************** */
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  color: slategrey;
+}
+
+.attribution a {
+  color: rgb(41, 111, 180);
+}
+
+/* ***************QR Code Component***************** */
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.qrContainer {
+  height: 450px;
+  width: 290px;
+  background-color: rgb(249, 214, 214);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  display: grid;
+  text-align: center;
+  transform: perspective(1000px) rotateX(0deg) translateZ(50px);
+  transition: all 0.6s ease-out;
+  box-shadow: 0 5px 15px rgb(255, 207, 207);
+  animation: glitch 3s ;
+}
+
+
+.qrContainer:hover {
+  transform: perspective(1000px) rotateX(10deg) translateZ(50px);
+  box-shadow: 0 20px 40px rgba(255, 221, 221, 0.552);
+}
+
+.qr__img_wrapper {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr__img_wrapper img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qr__content__heading {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  font-family: sans-serif;
+  color: #000;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+.qr__content__subheading {
+  padding: 0 18px;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 15px;
+  line-height: 14px;
+  color: rgba(81, 81, 81, 0.6);
+  font-weight: 400;
+  padding: 0 18px;
+  margin-bottom: 10px;
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  8% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  28% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  33% {
+    transform: none;
+    opacity: 1;
+  }
+  45% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  60% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  78% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
